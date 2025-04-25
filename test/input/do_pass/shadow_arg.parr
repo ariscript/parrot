@@ -1,0 +1,5 @@
+def f(x):
+    let shadow x = sub1(x)
+    in x
+
+f(2)

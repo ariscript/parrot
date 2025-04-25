@@ -1,0 +1,4 @@
+def foo(x):
+	print(sub1(x)) + x
+
+foo(2)

@@ -1,0 +1,11 @@
+{
+  "ocaml.sandbox": {
+    "kind": "custom",
+    "template": "direnv exec ${firstWorkspaceFolder} $prog $args"
+  },
+  "search.useIgnoreFiles": false,
+  "search.exclude": {
+    "_build": true,
+    ".direnv": true
+  }
+}

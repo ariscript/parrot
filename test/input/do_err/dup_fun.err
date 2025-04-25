@@ -1,0 +1,1 @@
+The identifier foo, defined at <do_err/dup_fun, 4:0-5:9>, shadows one defined at <do_err/dup_fun, 1:0-2:11>

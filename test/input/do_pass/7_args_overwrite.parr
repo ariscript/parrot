@@ -1,0 +1,7 @@
+def sum(a, b, c, d, e, f, g):
+	a + b + c + d + e + f + g
+
+def main(a, b, c, d, e, f, g):
+	sum(sub1(a), sub1(b), sub1(c), sub1(d), sub1(e), sub1(f), sub1(g)) + printStack(a) + b + c + d + e + f + g
+
+main(2, 2, 2, 2, 2, 2, 2)

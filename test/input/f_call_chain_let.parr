@@ -1,0 +1,4 @@
+let x = 3,
+    foo = (lambda (a): a + 1),
+    bar = (lambda (a): foo(a + x))
+in foo(bar(7))

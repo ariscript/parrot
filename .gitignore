@@ -1,0 +1,14 @@
+test/output/*.o
+test/output/*.run
+test/output/*.s
+test/output/*.dSYM
+test/output/*/*.o
+test/output/*/*.run
+test/output/*/*.s
+test/output/*/*.dSYM
+*.sw*
+*~
+*.log
+_build/*
+**/.DS_Store
+.direnv

@@ -1,0 +1,7 @@
+def sum(a):
+    a
+
+def main(a):
+    sum(sub1(a)) + printStack(a)
+
+main(2)

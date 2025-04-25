@@ -1,0 +1,16 @@
+def factorial(n, acc):
+    if n == 0: acc
+    else: factorial(n - 1, acc * n)
+
+check:
+    val fact = (lambda (n): factorial(n, 1)),
+    fact(1) is 1,
+    fact(3) is 6 because 3 * 2 * 1.
+
+def fact(n): factorial(n, 1)
+
+check:
+    fact(4) is== 24 because 4 * fact(3),
+    fact(5) is -3 because ().
+
+nil

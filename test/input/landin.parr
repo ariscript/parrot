@@ -1,0 +1,10 @@
+let landin = (lambda (f):
+    let ref = (0,),
+        fixed = (lambda (x): f(ref[0](x)))
+    in ref[0] := fixed),
+    g = (lambda (f, x):
+        if x == 0:
+            1
+        else:
+            x * f(x - 1))
+in landin(g)(3)

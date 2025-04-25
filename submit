@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+outfile="${1:-"$(basename "$PWD").zip"}"
+
+rm -f "$outfile"
+make clean
+zip -r test/input.zip test/input/
+zip -r "$outfile" lib/* exec/* test/input.zip test/*.ml test/dune test/output/ dune dune-project run Makefile *.md ./*.nix .envrc flake.lock
+rm -f test/input.zip
+
+dune clean
+dune build

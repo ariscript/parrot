@@ -1,0 +1,3 @@
+# ensure these effects happen only once
+let (a, (b, c), d) = (0, print((print(1), print(2))), 3) in
+  (a, b, c, d)

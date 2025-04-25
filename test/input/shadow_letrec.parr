@@ -1,0 +1,3 @@
+let rec a = (lambda: a),
+        a = (lambda (x): x)
+in a(2)

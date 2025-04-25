@@ -1,0 +1,4 @@
+def fact(n, acc):
+  if n == 0 : acc else: fact(n - 1, acc * n)
+
+fact(5, 1)

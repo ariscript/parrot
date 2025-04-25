@@ -1,0 +1,55 @@
+def link(first, rest):
+  (first, rest)
+
+def sum_acc(l, acc):
+    if l == nil:
+        0
+    else:
+        let (first, rest) = l
+        in sum_acc(rest, first + acc)
+
+def sum(l):
+    sum_acc(l, 0)
+
+def append(l1, l2):
+    if l1 == nil:
+        l2
+    else:
+        let (first, rest) = l1
+        in link(first, append(rest, l2))
+
+def reverse(l):
+    if l == nil:
+        nil
+    else:
+        let (first, rest) = l
+        in append(reverse(rest), (first, nil))
+
+def map(f, l):
+    if l == nil:
+        nil
+    else:
+        let (first, rest) = l
+        in link(f(first), map(f, rest))
+
+def filter(p, l):
+    if l == nil:
+        nil
+    else:
+        let (first, rest) = l in
+        if p(first): link(first, filter(p, rest))
+        else: filter(p, rest)
+
+def foldr(f, base, l):
+    if l == nil:
+        base
+    else:
+        let (first, rest) = l
+        in f(first, foldr(f, base, rest))
+
+def foldl(f, base, l):
+    if l == nil:
+        base
+    else:
+        let (first, rest) = l
+        in foldl(f, f(first, base), rest)

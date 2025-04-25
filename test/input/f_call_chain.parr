@@ -1,0 +1,3 @@
+def foo(a): a + 1
+def bar(a): a * 5
+foo(bar(7))

@@ -1,0 +1,6 @@
+BasedOnStyle: LLVM
+BreakBeforeBraces: Attach
+IndentCaseLabels: true
+IndentCaseBlocks: true
+DerivePointerAlignment: false
+PointerAlignment: Left

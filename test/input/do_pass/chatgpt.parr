@@ -1,0 +1,9 @@
+let p = if !(add1(0) == 0): 5 else: (2 * 3),
+    q = let tmp = sub1(9) in (tmp * tmp),
+    r = if !(((p - q) * (p + q)) == 0): p else: q
+in
+if !(r == 0):
+  let z = add1(r) in 
+    if !((z - p) == 0): z else: p
+else:
+  (add1(q) + sub1(p))

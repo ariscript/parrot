@@ -1,0 +1,12 @@
+def length(l):
+    if l == nil: 0
+    else:
+        let (_, rest) = l
+        in 1 + length(rest)
+
+check:
+    length(nil) is 0,
+    length((1, nil)) is== 1,
+    length((1, (2, nil))) isn't 1.
+
+0

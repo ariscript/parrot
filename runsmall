@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+LANG_EXTENSION=".parr"
+
+input="$1"
+
+clean_path="${input#input/}"
+clean_dir=$(dirname "$clean_path")
+clean_path=$(basename "$clean_path" "$LANG_EXTENSION")
+clean_path="$clean_dir/$clean_path"
+exec_path="$clean_path.run"
+
+make test/output/"$exec_path" && ./test/output/"$exec_path" 15

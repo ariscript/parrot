@@ -1,0 +1,16 @@
+def even(n):
+    if n == 0: true
+    else: if n == 1: false
+    else: odd(n - 1)
+and def odd(n):
+    if n == 0: false
+    else: if n == 1: true
+    else: even(n - 1)
+
+check:
+    10 satisfies even,
+    42 violates odd,
+    11 satisfies odd,
+    83 violates even.
+
+0

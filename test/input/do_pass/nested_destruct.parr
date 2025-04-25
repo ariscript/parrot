@@ -1,0 +1,5 @@
+let (a, (b, c), d) = (0, (1, 2), 3) in
+  print(a);
+  print(b);
+  print(c);
+  d

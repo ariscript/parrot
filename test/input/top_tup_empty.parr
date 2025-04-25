@@ -1,0 +1,7 @@
+let fn1 = (lambda: 1) in
+let fn2 = (lambda: 1) in
+let fn3 = (lambda: 1) in
+let fn4 = (lambda: 1) in
+let fn5 = (lambda: 1) in
+
+()

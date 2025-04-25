@@ -1,0 +1,14 @@
+def less_than_boxed(x, y, box):
+    box[0] := box[0] + 1;
+    x < y
+
+check:
+    example box = (0,),
+    val less_than = (lambda (x, y): less_than_boxed(x, y, box)),
+    1 is%(less_than) 2,
+    box[0] is== 1,
+    val _ = box[0] := 0,
+    val shadow less_than = (lambda (x, y): let x = less_than(x, y) in print(box); x),
+    1 is%(less_than) 3 because 2.
+
+0

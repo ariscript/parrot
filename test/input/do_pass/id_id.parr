@@ -1,0 +1,4 @@
+def id1(x): x
+def id2(x): id1(x)
+
+id2(10)

@@ -1,0 +1,7 @@
+def sumorial(n):
+    if n == 0:
+        0
+    else:
+        n + sumorial(n - 1)
+
+sumorial(3000)

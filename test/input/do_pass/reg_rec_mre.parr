@@ -1,0 +1,5 @@
+def foo(x):
+    if x==0: x
+    else: foo(sub1(x)) + x
+
+foo(1)

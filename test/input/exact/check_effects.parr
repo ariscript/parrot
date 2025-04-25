@@ -1,0 +1,14 @@
+def reset(t):
+    t[0] := 0
+
+def inc(t):
+    t[0] := (t[0] + 1)
+
+check:
+    val box = (0,),
+    # these tests are supposed to fail, but they show evaluation order
+    print(inc(box)) is print(inc(box)),
+    reset(box);
+    print(inc(box)) is print(inc(box)) because print(inc(box)).
+
+nil

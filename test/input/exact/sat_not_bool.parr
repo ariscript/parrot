@@ -1,0 +1,9 @@
+def id(x): x
+
+check:
+    true satisfies id,
+    2 satisfies id,
+    () violates id,
+    false satisfies id because 3.
+
+nil

@@ -1,0 +1,11 @@
+def is_nil(l):
+    l == nil
+
+def last((first, rest)):
+    if is_nil(rest): 
+        first
+    else:
+        last(rest[1])
+
+let l = (1, (2, (3, nil))) in
+last(l)

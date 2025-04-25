@@ -1,0 +1,79 @@
+def link(first, rest):
+  (first, rest)
+
+def sum_acc(l, acc):
+    if l == nil:
+        0
+    else:
+        let (first, rest) = l
+        in sum_acc(rest, first + acc)
+
+def sum(l):
+    sum_acc(l, 0)
+
+def append(l1, l2):
+    if l1 == nil:
+        l2
+    else:
+        let (first, rest) = l1
+        in link(first, append(rest, l2))
+
+def reverse(l):
+    if l == nil:
+        nil
+    else:
+        let (first, rest) = l
+        in append(reverse(rest), (first, nil))
+
+def map(f, l):
+    if l == nil:
+        nil
+    else:
+        let (first, rest) = l
+        in link(f(first), map(f, rest))
+
+def filter(p, l):
+    if l == nil:
+        nil
+    else:
+        let (first, rest) = l in
+        if p(first): link(first, filter(p, rest))
+        else: filter(p, rest)
+
+def foldr(f, base, l):
+    if l == nil:
+        base
+    else:
+        let (first, rest) = l
+        in f(first, foldr(f, base, rest))
+
+def foldl(f, base, l):
+    if l == nil:
+        base
+    else:
+        let (first, rest) = l
+        in foldl(f, f(base, first), rest)
+
+def is_even(x):
+    if x == 0:
+        true
+    else:
+        is_odd(x - 1)
+
+and def is_odd(x):
+    if x == 0:
+        false
+    else:
+        is_even(x - 1)
+
+let l = link(1, link(2, link(3, link(4, link(5, nil))))) in
+
+let square = (lambda (x): x * x) in
+let add = (lambda (x, y): x + y) in
+
+let squared = map(square, l) in
+let even_squares = filter(is_even, squared) in
+let reversed = reverse(even_squares) in
+let total = foldl(add, 0, reversed) in
+
+total

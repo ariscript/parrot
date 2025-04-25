@@ -1,0 +1,6 @@
+while running test at 5:4-5:18, the predicate returned a non-boolean value (2) when called on the left side
+while running test at 6:0-6:18, the predicate returned a non-boolean value (()) when called on the left side
+while running test at 7:4-7:32, the predicate returned a non-boolean value (3) when called on the explanation
+failed test at 7:4-7:32: the left side failed the predicate (false)
+check block: 1/4 tests passed
+nil

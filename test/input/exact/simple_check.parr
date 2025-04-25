@@ -1,0 +1,4 @@
+check:
+    print(1) is print(1).
+
+print(0)

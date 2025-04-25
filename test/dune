@@ -1,0 +1,6 @@
+(executable
+ (name test)
+ (libraries unix str parrot)
+ (preprocess
+  (pps ppx_variants_conv ppx_deriving.show visitors.ppx))
+ (enabled_if true))

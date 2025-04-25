@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+
+# convenience script because having good shell completions is nice
+
+LANG_EXTENSION=".parr"
+
+input="$1"
+vg="false"
+
+while getopts ":v:" opt; do
+    case $opt in
+        v) input="$OPTARG"
+        vg="true"
+        ;;
+        *);;
+    esac
+done
+
+clean_path="${input#test/input/}"
+clean_dir=$(dirname "$clean_path")
+clean_path=$(basename "$clean_path" "$LANG_EXTENSION")
+clean_path="$clean_dir/$clean_path"
+exec_path="$clean_path.run"
+
+if test "$vg" = "true"; then
+    make test/output/"$exec_path" && valgrind test/output/"$exec_path"
+else
+    make test/output/"$exec_path" && ./test/output/"$exec_path"
+fi

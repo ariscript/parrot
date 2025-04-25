@@ -1,0 +1,6 @@
+def count(curr, targ):
+    if (curr < targ): count(add1(curr), targ)
+    else: curr
+
+# this would need a large stack
+count(0, 268435455)

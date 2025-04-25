@@ -1,0 +1,10 @@
+let rec foldl = (lambda (f, acc, l):
+    if l == nil:
+        acc
+    else:
+        let (first, rest) = l in 
+        foldl(f, f(acc, first), rest))
+in
+let mylist = (1, (2, (3, nil))) in
+let nest = (lambda (a, b): (a, b)) in
+foldl(nest, nil, mylist) 

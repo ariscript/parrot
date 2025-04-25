@@ -1,0 +1,8 @@
+def less_than(x, y): x < y
+
+check:
+    3 is%(less_than) 4,
+    1 is%(less_than) 3 because 2.
+
+nil
+

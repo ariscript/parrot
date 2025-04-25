@@ -1,0 +1,5 @@
+def foo(n): print(bar(n)) > 1000000
+
+and def bar(n): print(n) - 1
+
+foo(4294967295)

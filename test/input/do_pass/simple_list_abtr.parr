@@ -1,0 +1,15 @@
+def link(first, rest):
+    (first, rest)
+
+def sum_acc(l, acc):
+    if l == nil:
+        acc
+    else:
+        let (first, rest) = l in
+        sum_acc(rest, first + acc) + 0
+
+def sum(l):
+    sum_acc(l, 0) + 0
+
+let l = link(1, link(2, link(3, link(4, link(5, link(6, link(7, link(8, link(9, link(10, nil)))))))))) in
+sum(l)

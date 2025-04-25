@@ -1,0 +1,7 @@
+def foo(x):
+    sub1(x)
+
+def foo(x, y):
+    x * y
+
+foo(1)

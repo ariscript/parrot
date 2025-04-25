@@ -1,0 +1,5 @@
+def foo(a, b):
+    if (a == 0) || (b == 0): a + b
+    else: foo(sub1(a), sub1(b)) + a
+
+foo(1, 1)

@@ -1,0 +1,20 @@
+let x = 5,
+    y = add1(10),
+    z = let a = sub1(y),
+            b = add1(a),
+            c = let p = sub1(b),
+                    q = add1(p) in
+                  add1(q) in
+         sub1(c),
+    w = let u = add1(z),
+            v = let r = sub1(u),
+                    s = add1(r),
+                    t = let m = sub1(s),
+                            n = add1(m),
+                            o = sub1(n) in
+                          add1(o) in
+                sub1(t) in
+         add1(v) in
+    let result = let final = add1(w) in
+                   sub1(final) in
+      sub1(result)

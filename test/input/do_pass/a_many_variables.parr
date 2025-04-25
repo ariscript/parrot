@@ -1,0 +1,7 @@
+let a = 0, 
+    b = 1, 
+    c = add1(b), 
+    d = sub1(a) in
+  let shadow c = sub1(c), 
+      e = 8 in
+    add1(c)

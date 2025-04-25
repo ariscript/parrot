@@ -1,0 +1,3 @@
+let x = 1 in
+let shadow x = 2 in
+  x

@@ -1,0 +1,71 @@
+def member(x, l):
+    if l == nil: false
+    else: if l[0] == x: true
+    else: member(x, l[1])
+
+def append(l1, l2):
+    if l1 == nil: l2
+    else:
+        let (first, rest) = l1
+         in (first, append(rest, l2))
+
+def reverse(l):
+    if l == nil: nil
+    else:
+        let (first, rest) = l
+         in append(reverse(rest), (first, nil))
+
+def andmap(f, l):
+    if l == nil: true
+    else:
+        let (first, rest) = l
+         in f(first) && andmap(f, rest)
+
+def subset(a, b):
+    if a == nil: true
+    else:
+        let (first_a, rest_a) = a
+         in member(first_a, b) && subset(rest_a, b)
+
+def same_items(a, b):
+    subset(a, b) && subset(b, a)
+
+def is_even(x):
+    if x == 0:
+        true
+    else:
+        is_odd(x - 1)
+
+and def is_odd(x):
+    if x == 0:
+        false
+    else:
+        is_even(x - 1)
+
+check:
+    1 is%(member) (1, (2, (3, nil))),
+    1 is%(member) (3, (2, (1, nil))),
+    5 isn't%(member) nil,
+    false isn't%(member) (1, (true, ((), nil))),
+
+    example numbers = (1, (2, (3, (4, (5, nil))))),
+    nil is%(subset) nil,
+    nil is%(same_items) nil,
+    nil is%(subset) numbers,
+    numbers isn't%(subset) nil,
+    (4, nil) is%(subset) numbers,
+    numbers is%(subset) numbers,
+    numbers is%(same_items) numbers,
+    numbers is%(same_items) reverse(numbers).
+
+check:
+    (1, 2) is%(subset) (1, (2, (3,))).
+
+check:
+    example odd = (1, (3, (5, (7, nil)))),
+    example bad = (2, append(odd, (8, (10, nil)))),
+    val all_odd = (lambda (l): andmap(is_odd, l)),
+    odd satisfies all_odd,
+    bad violates all_odd.
+
+is_odd(input())

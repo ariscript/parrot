@@ -1,0 +1,6 @@
+let id = (lambda (x): x) in
+let r = (id,) in
+let f = (lambda (x): r[0](x)) in
+  r[0] := f;
+  f(0)
+

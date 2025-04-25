@@ -1,0 +1,14 @@
+check: 
+    val foo = (1,),
+    val bar = (1,),
+    val baz = (),
+    foo is foo,
+    foo is== foo,
+    bar is bar,
+    bar is== bar,
+    foo is== bar,
+    foo is bar,
+    foo isn't baz,
+    foo isn't== bar.
+
+nil

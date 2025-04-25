@@ -1,0 +1,3 @@
+let x = 1,
+    f = (lambda: x)
+in f()

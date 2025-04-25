@@ -1,0 +1,10 @@
+def f(x):
+	let y = x + 1
+	in g(x, y)
+and def g(x, y):
+	let s = x + y
+	in s
+f(10)
+# (fun f(x#12): (alet y#8 = (x#12 + 1) in (g(x#12, y#8))))
+# (fun g(x#20, y#21): (alet s#16 = (x#20 + y#21) in s#16))
+# (f(10))
